@@ -1,0 +1,152 @@
+body {
+    --yellow: #F4D04E;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --white: #FFFFFF;
+
+    --figtree-extra-bold: 800;
+    --figtree-medium: 500;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    font-weight: var(--figtree-medium);
+    color: var(--gray-950)
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    background-color: var(--white);
+    border: 1px solid #111111;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0px #000000;
+
+    width: 384px;
+    height: 522px;
+    box-sizing: border-box;
+    padding: 24px;
+    margin: 10px;
+
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.illustration-img {
+    width: 336px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.main-content {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.main-content .status {
+    font-weight: var(--figtree-extra-bold);
+    font-size: 14px;
+    background-color: var(--yellow);
+
+    width: 82px;
+    line-height: 150%;
+    box-sizing: border-box;
+    padding: 4px 12px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .date {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.main-content h1 {
+    font-weight: var(--figtree-extra-bold);
+    font-size: 24px;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+.main-content h1:focus,
+.main-content h1:hover {
+    color: var(--yellow);
+}
+
+.main-content .description {
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray-500);
+}
+
+.avatar-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.avatar-container .avatar-img {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar-container p {
+    font-weight: var(--figtree-extra-bold);
+    font-size: 14px;
+    line-height: 150%;
+}
+
+@media(max-width:425px) {
+    .card-container {
+        width: 327px;
+        height: 509px;
+    }
+
+    .illustration-img {
+        width: 279px;
+    }
+
+    .main-content .status {
+        font-size: 12px;
+        width: 73px;
+    }
+
+    .main-content .date {
+        font-size: 12px;
+    }
+
+    .main-content h1 {
+        font-size: 20px;
+    }
+
+    .main-content .description {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:360px) {
+    .card-container {
+        max-width: 285px;
+    }
+
+    .illustration-img {
+        max-width: 240px;
+    }
+}
